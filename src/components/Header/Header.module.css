@@ -1,0 +1,46 @@
+.logoC img {
+    height: 15px;
+    margin:4% 2% 2% 2%;
+}
+.headerBlock{
+    display: flex;
+    justify-content:space-between;
+    border-bottom: 1px solid rgb(215, 209, 209);
+    padding-bottom: 0%;
+}
+.logoC{
+    margin:2% 0% 0% 5%;
+}
+.profile{
+    border:1px solid grey;
+    border-radius: 15px;
+    display:flex;
+    justify-content: space-around;
+    align-content:flex-end;
+    width: 20%;
+    padding-top: 0.5%;
+    margin:1% 5% 1% 0%;
+}
+.profile img{
+    height: 30px;
+    width:  30px;
+    border-radius: 100%;
+}
+.name{
+    font-weight: 700;
+    font-size: 18px;
+    /* margin-top:2%;    */
+}
+@media screen and (min-width:300px) and (max-width:720px) {
+    .headerBlock{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 3%;
+    }
+    .profile{
+        width: 80%;
+        margin: auto;
+    }
+    
+}

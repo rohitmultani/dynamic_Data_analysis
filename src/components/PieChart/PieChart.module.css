@@ -1,0 +1,44 @@
+.Box{
+    position:absolute;
+    top:270px;
+    left:700px;
+    width: 25vw;
+    border:1px solid rgb(215, 209, 209);
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+.heading{
+
+    font-weight: 600;
+}
+.detail{
+    margin: 2%;
+    font-size: 12px;
+}
+.detail span{
+    font-weight: 500;
+}
+.marks{
+    color:#438AF6;
+}
+.chart img{
+    position:absolute;
+    top:130px;
+    left:85px;
+    height: 60px;
+}
+@media screen and (min-width:300px) and (max-width:720px) {
+    .Box{
+        position: static;
+        width: 100vw;
+    }   
+    .chart img{
+        position:relative;
+        top:85px;
+        left:75px;
+        height: 60px;
+    }
+
+}

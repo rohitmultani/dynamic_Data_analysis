@@ -1,0 +1,94 @@
+.modalBar{
+    position: fixed;
+    top: 10%;
+    /* position: absolute;
+    top: 50%; */
+    transform: translate(7%, 10%);
+    height: 65vh;
+    width: 40vw;
+    background-color:white;
+    border-radius: 10px;
+    z-index:10
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headImage img{
+    height: 40px;
+}
+.headName{
+    font-size: 30px;
+    font-weight: 700;
+}
+.rank,.percentile,.score{
+    display: flex;
+    justify-content: space-between;
+    height: 15%;
+}
+.rankPara,.percentilePara,.scorePara{
+    width:20vw;
+}
+.rank span,.percentile span, .score span{
+    font-weight: 700;
+}
+.rankNum,.percentileNum,.scoreNum{
+height: 20px;
+width: 20px;
+padding-left: 4%;
+margin:0%;
+border-radius: 50%;
+background-color: #142683;
+color:white;
+}
+.percentileInput input,.rankInput input, .scoreInput input {
+    height: 70%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input{
+    height: 10vh;
+    border:1px solid #142683;
+}
+.bar1{
+    display: flex   ;
+}
+.btns button{
+    width: 10vw;
+    height: 7vh;
+    margin:1%;
+    float: right;
+    border-radius:10px;
+    font-size: 15px;
+}
+.saveBtn{
+    background-color: #142683;
+    border-style: none;
+    color:white;
+}
+.cancelBtn{
+    color:#142683;
+    background-color: white;
+    border: 1px solid #142683;
+}
+hr{
+    width: 75%;
+}
+@media screen and (min-width: 320px) and (max-width:780px){
+    .modalBar{
+        /* top:-10px;
+        left:-10px; */
+        transform: translate(-1%,-10%);
+        height: max-content;
+        width: 100vw;
+    }
+    .btns button{
+        width: 20vw;
+        height: 7vh;
+    }
+    
+    
+}

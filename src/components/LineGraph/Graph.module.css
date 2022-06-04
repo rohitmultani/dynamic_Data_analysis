@@ -1,0 +1,47 @@
+.comparisonBox{
+    margin-top:1%;
+    border:1px solid rgb(215, 209, 209);
+    width: 50vw;
+}
+.detail{
+    display: flex;
+    justify-content: space-between;
+}
+.graph{
+    z-index: -10;
+}
+.name{
+    width: 80%;
+    margin-left: 2%;
+}
+.img{
+    border-radius: 50%;
+    width:60px;
+    margin-right: 2%;
+    background-color:#EBF0F5
+}
+.img img{
+    width: 40px;
+    margin:12%;
+}
+.name span{
+    font-weight: 600;
+}
+.title1{
+    margin:2%;
+    font-weight: 600;
+}
+@media screen and (min-width:300px) and (max-width:720px) {
+    .comparisonBox{
+        display: block;
+        text-align: center;
+        width: 100vw;
+    }
+    .img{
+        display:none
+    }
+    .detail{
+        justify-content: center;
+    }
+    
+}

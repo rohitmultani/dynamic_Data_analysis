@@ -1,0 +1,38 @@
+.SideBar{
+    border-right:1px solid rgb(215, 209, 209);
+    border-bottom: 1px solid rgb(215, 209, 209);
+    width: 15%;
+    height: 79vh;
+    text-align: left;
+    padding: 5% 0% 0% 0%;
+}
+.Dashboard img,.Skills img,.Intern img{
+    height: 20px;
+}
+.Dashboard,.Intern,.Skills{
+    padding: 4%;
+    font-size: 20px;
+    width: 70%;
+    margin-top:5%;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    font-weight: 500;
+}
+.Dashboard span,.Skills span,.Intern span{
+    margin: 2%;
+}
+.Skills{
+    color:blue;
+    background: rgb(216, 215, 215);
+}
+.Dashboard:hover,.Intern:hover{
+    color:blue;
+    background: rgb(216, 215, 215);
+}
+@media screen and (min-width:300px) and (max-width:720px) {
+   .SideBar{
+       width: 100%;
+       height: 80vh;
+   }
+    
+}

@@ -1,0 +1,26 @@
+.progressVisualFull {
+    display: flex;
+    height: 10px;
+    margin: 2%;
+    width: 50%;
+    border-radius: 20px;
+  }
+  .progressLabel{
+      margin:2%;
+      font-weight: 300;
+  }
+  .progressVisualPart {
+    transition: width 2s;
+    border-radius: 20px;
+  }
+.bar{
+    display: flex;
+}
+  .progresPercent{
+      margin-left:10%;
+  }
+  .progressLabel {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  
