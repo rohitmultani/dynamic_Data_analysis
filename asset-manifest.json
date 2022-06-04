@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/dynamic_Data_analysis/static/css/main.76d72033.css",
+    "main.js": "/dynamic_Data_analysis/static/js/main.7a3d9f92.js",
+    "static/media/my.jpeg": "/dynamic_Data_analysis/static/media/my.82c9a2c7eb9f796f355f.jpeg",
+    "index.html": "/dynamic_Data_analysis/index.html",
+    "main.76d72033.css.map": "/dynamic_Data_analysis/static/css/main.76d72033.css.map",
+    "main.7a3d9f92.js.map": "/dynamic_Data_analysis/static/js/main.7a3d9f92.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76d72033.css",
+    "static/js/main.7a3d9f92.js"
+  ]
+}
