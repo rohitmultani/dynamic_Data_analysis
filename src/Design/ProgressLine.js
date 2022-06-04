@@ -4,10 +4,8 @@ import classes from "./ProegressLine.module.css";
 const ProgressLine = ({
   label,
   backgroundColor = "#e5e5e5",
-  visualParts = [{}
-  ]
+  visualParts = [{}],
 }) => {
- 
   const [widths, setWidths] = useState(
     visualParts.map(() => {
       return 0;
@@ -15,11 +13,9 @@ const ProgressLine = ({
   );
 
   useEffect(() => {
-    
     requestAnimationFrame(() => {
-     
       setWidths(
-        visualParts.map(item => {
+        visualParts.map((item) => {
           return item.percentage;
         })
       );
@@ -30,36 +26,32 @@ const ProgressLine = ({
     <div>
       <div className={classes.progressLabel}>{label}</div>
       <div className={classes.bar}>
-      <div
-        className={classes.progressVisualFull}
-        // to change the background color dynamically
-        style={{
-          backgroundColor
-        }}
-      >
-        {visualParts.map((item, index) => {
-           
+        <div
+          className={classes.progressVisualFull}
+          style={{
+            backgroundColor,
+          }}
+        >
+          {visualParts.map((item, index) => {
             return (
-                <div
-              
+              <div
                 key={index}
                 style={{
-                    width: widths[index],
-                    
-                    backgroundColor: item.color
+                  width: widths[index],
+
+                  backgroundColor: item.color,
                 }}
                 className={classes.progressVisualPart}
-                />
-                );
-            })}
+              />
+            );
+          })}
+        </div>
+        {visualParts.map((item) => {
+          return (
+            <span className={classes.progresPercent}>{item.percentage}</span>
+          );
+        })}
       </div>
-      {visualParts.map((item)=>{
-          return(
-
-<span className={classes.progresPercent}>{item.percentage}</span>
-          )
-      })}
-</div>
     </div>
   );
 };

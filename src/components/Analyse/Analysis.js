@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment} from "react";
 import classes from "./Analysis.module.css";
 import ProgressLine from "../../Design/ProgressLine";
 

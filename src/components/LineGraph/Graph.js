@@ -1,59 +1,58 @@
-import { Fragment, useState,useContext,useEffect } from "react";
+import { Fragment, useState, useContext, useEffect } from "react";
 import classes from "./Graph.module.css";
 import graph from "../../Images/graph.png";
 import ReactApexChart from "react-apexcharts";
 import ValContext from "../../Context/ValContext";
 const Graph = () => {
-  const DataCtx=useContext(ValContext);
-  const [lower,setLower]=useState(true)
-  let l=DataCtx.report.length;
-  console.log(DataCtx.report[l-1].percentile)
-  const percentile=DataCtx.report[l-1].percentile;
-useEffect(()=>{
-
-  if(percentile>72){
-setLower(false)
-  }
-  else(
-    setLower(true)
-  )
-  setState({...state,series: [
-    {
-      name: "Your Score",
-      data: [
+  const DataCtx = useContext(ValContext);
+  const [lower, setLower] = useState(true);
+  let l = DataCtx.report.length;
+  console.log(DataCtx.report[l - 1].percentile);
+  const percentile = DataCtx.report[l - 1].percentile;
+  useEffect(() => {
+    if (percentile > 72) {
+      setLower(false);
+    } else setLower(true);
+    setState({
+      ...state,
+      series: [
         {
-          x: 0,
-          y: 0,
+          name: "Your Score",
+          data: [
+            {
+              x: 0,
+              y: 0,
+            },
+            {
+              x: percentile,
+              y: percentile,
+            },
+            {
+              x: 100,
+              y: 0,
+            },
+          ],
         },
         {
-          x:percentile,
-          y: percentile
-        },
-        {
-          x: 100,
-          y: 0,
+          name: "Average Score",
+          data: [
+            {
+              x: 0,
+              y: 0,
+            },
+            {
+              x: 72,
+              y: 72,
+            },
+            {
+              x: 100,
+              y: 0,
+            },
+          ],
         },
       ],
-    },
-    {
-      name: "Average Score",
-      data: [
-        {
-          x: 0,
-          y: 0,
-        },
-        {
-          x: 72,
-          y: 72,
-        },
-        {
-          x: 100,
-          y: 0,
-        },
-      ],
-    },
-  ],})
-},[percentile])
+    });
+  }, [percentile]);
   const [state, setState] = useState({
     series: [
       {
@@ -64,8 +63,8 @@ setLower(false)
             y: 0,
           },
           {
-            x:percentile,
-            y: percentile
+            x: percentile,
+            y: percentile,
           },
           {
             x: 100,
@@ -120,7 +119,7 @@ setLower(false)
       },
       grid: {
         row: {
-          colors: ["#f3f3f3", "transparent"], 
+          colors: ["#f3f3f3", "transparent"],
           opacity: 0.5,
         },
       },
@@ -148,10 +147,14 @@ setLower(false)
         </div>
         <div className={classes.detail}>
           <div className={classes.name}>
-            <span> You scored {DataCtx.report[l-1].percentile}% percentile </span> which is 
-             {lower?<span> lower</span>:<span> greater</span>}
-             than the
-            average percentile 72% of all engineers who took this assessment.
+            <span>
+              {" "}
+              You scored {DataCtx.report[l - 1].percentile}% percentile{" "}
+            </span>{" "}
+            which is
+            {lower ? <span> lower</span> : <span> greater</span>}
+            than the average percentile 72% of all engineers who took this
+            assessment.
           </div>
           <div className={classes.img}>
             <img src={graph} alt={graph}></img>

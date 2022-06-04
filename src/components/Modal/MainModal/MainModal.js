@@ -1,42 +1,20 @@
 import classes from "./MainModal.module.css";
-import { memo, useState,useContext,useEffect} from "react";
+import { memo, useContext } from "react";
 import { useRef } from "react";
 import html from "../../../Images/html.png";
 import ValContext from "../../../Context/ValContext";
 const ModalBar = (props) => {
-    const DataCtx=useContext(ValContext);
-    const inputRank = useRef();
-    const inputPercentile = useRef();
-    const inputScore = useRef();
-//   const [rank, setRank] = useState(19292);
-//   const [percentile, setPercentile] = useState();
-//   const [score, setScore] = useState();
-//   const rankHandler = (event) => {
-//       event.preventDefault();
-    //   console.log(event.target.value)
-    // setTimeout(() => {
-        // setRank(event.target.value);
-        // console.log(inputElement.current.value)
-    // },100);
-//   };
-//   const perHandler = (event) => {
-//     setTimeout(() => {
-//       setPercentile(event.target.value);
-//     },100);
-//   };
-//   const scoreHandler = (event) => {
-//     setTimeout(() => {
-//       setScore(event.target.value);
-//     },100);
-//   };
+  const DataCtx = useContext(ValContext);
+  const inputRank = useRef();
+  const inputPercentile = useRef();
+  const inputScore = useRef();
   const submitHandler = () => {
-      console.log(inputRank.current.value)
-      DataCtx.addData({
-          rank:inputRank.current.value,
-          percentile:inputPercentile.current.value,
-          score:inputScore.current.value
-        })
-        console.log(DataCtx.report);
+    props.backdropOpen(false);
+    DataCtx.addData({
+      rank: inputRank.current.value,
+      percentile: inputPercentile.current.value,
+      score: inputScore.current.value,
+    });
   };
   return (
     <div className={classes.modalBar}>
@@ -56,9 +34,7 @@ const ModalBar = (props) => {
         </div>
         <div>
           <div className={classes.rankInput}>
-            <input type="number" min="0" 
-             ref={inputRank}
-            ></input>
+            <input type="number" min="0" ref={inputRank}></input>
           </div>
         </div>
       </div>
@@ -72,10 +48,7 @@ const ModalBar = (props) => {
         </div>
         <div>
           <div className={classes.percentileInput}>
-            <input type="number" min="0"
-            ref={inputPercentile}>
-            
-            </input>
+            <input type="number" min="0" ref={inputPercentile}></input>
           </div>
         </div>
       </div>
@@ -89,8 +62,7 @@ const ModalBar = (props) => {
         </div>
         <div>
           <div className={classes.scoreInput}>
-            <input type="number" min="0" 
-            ref={inputScore}></input>
+            <input type="number" min="0" ref={inputScore}></input>
           </div>
         </div>
       </div>

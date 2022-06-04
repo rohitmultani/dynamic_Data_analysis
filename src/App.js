@@ -8,9 +8,9 @@ function App() {
   return (
     <div>
       <Header></Header>
-      <SideBar/>
+      <SideBar />
       <ContextProvider>
-        <SkillTest></SkillTest>
+        <SkillTest/>
       </ContextProvider>
     </div>
   );
