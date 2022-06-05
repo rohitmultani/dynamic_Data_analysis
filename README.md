@@ -19,6 +19,7 @@ npm install --save react-apexcharts apexcharts
 and import
 import ReactApexChart from "react-apexcharts";
 
+### https://rohitmultani.github.io/dynamic_Data_analysis/ 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
